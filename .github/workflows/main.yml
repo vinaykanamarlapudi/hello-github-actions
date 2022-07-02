@@ -8,5 +8,5 @@ jobs:
       - uses: actions/checkout@v1
       - uses: docker://hello-world:latest
 #       - uses: ./action-a
-        with:
-          MY_NAME: "Vinay"
+#         with:
+#           MY_NAME: "Vinay"
