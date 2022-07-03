@@ -27,8 +27,10 @@ jobs:
           rm -rf oras_0.12.0_*.tar.gz oras-install/
           echo "Oras installed!"
           
-      - name: Running action   
-        uses: ruchika-jain/package-action@1.0.1
-        with:
-          package-name: 'hello-ghcr-upload'
-        id: publish-action
+      - name: Login to ghcr
+        run: oras login ghcr.io`, ['-u', repositoryOwner, '-p', ${{ secrets.GITHUB_TOKEN }}]
+#       - name: Running action   
+#         uses: ruchika-jain/package-action@1.0.1
+#         with:
+#           package-name: 'hello-ghcr-upload'
+#         id: publish-action
