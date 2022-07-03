@@ -29,8 +29,9 @@ jobs:
           echo "Oras installed!"
           
       - name: Login to ghcr
-        run: oras login ghcr.io '-u' repositoryOwner -p ${{ secrets.GITHUB_TOKEN }}
-#         run: oras login ghcr.io '-u' repositoryOwner -p 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
+        run: oras login ghcr.io '-u' repositoryOwner -p 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
+        # run: oras login ghcr.io '-u' repositoryOwner -p ${{ secrets.GITHUB_TOKEN }}
+#       
       - name: Uploading to ghcr
         run: oras push ghcr.io/vinaykanamarlapudi/fp:1.0.0 --manifest-config /dev/null:application/vnd.actions.packages ./:application/vnd.actions.packages.layer.v1+tar
 #       - name: Running action   
