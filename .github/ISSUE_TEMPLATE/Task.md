@@ -1,18 +1,13 @@
 ---
 name: Task
 about: Describe this issue template's purpose here.
-title: ''
-labels: ''
+title: '[Task] <title>'
+labels: 'task'
 assignees: ''
 
 ---
 
----
-name: (Internal Only) Create a task
-about: A task is smallest unit of work, handled by one or a pair of developers. 
-title: '[Task] <title>'
-labels: 'task'
----
+
 
 <!-- Please fill out the REQUIRED segments -->
 
