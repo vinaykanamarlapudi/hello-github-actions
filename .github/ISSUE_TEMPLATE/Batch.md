@@ -1,18 +1,10 @@
 ---
 name: Batch
 about: Describe this issue template's purpose here.
-title: ''
-labels: ''
-assignees: ''
-
----
-
----
-name: (Internal Only) Create a batch
-about: Create a Batch, which is a group of tasks or bugs. This is synonymous to a feature internally worked and tracked by Nirvana crew.
 title: '[Batch] <title>'
 labels: 'batch'
 assignees: ''
+
 ---
 
 <!-- Please fill out the REQUIRED segments -->
