@@ -1,13 +1,11 @@
 ---
 name: Task
 about: Describe this issue template's purpose here.
-title: '[Task] <title>'
-labels: 'task'
+title: "[Task] <title>"
+labels: ''
 assignees: ''
 
 ---
-
-
 
 <!-- Please fill out the REQUIRED segments -->
 
