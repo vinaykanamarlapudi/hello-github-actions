@@ -19,20 +19,20 @@ jobs:
         #   ref: 'Give optional branch name/SHA/tag to checkout' 
   
 #       # The ORAS cli, possibly will be baked in runner-vm and this step will not be required
-#       - name: Install Oras
-#         run: |
-#           curl -LO https://github.com/oras-project/oras/releases/download/v0.12.0/oras_0.12.0_linux_amd64.tar.gz
-#           mkdir -p oras-install/
-#           tar -zxf oras_0.12.0_*.tar.gz -C oras-install/
-#           mv oras-install/oras /usr/local/bin/
-#           rm -rf oras_0.12.0_*.tar.gz oras-install/
-#           echo "Oras installed!"
+      - name: Install Oras
+        run: |
+           curl -LO https://github.com/oras-project/oras/releases/download/v0.12.0/oras_0.12.0_linux_amd64.tar.gz
+           mkdir -p oras-install/
+           tar -zxf oras_0.12.0_*.tar.gz -C oras-install/
+           mv oras-install/oras /usr/local/bin/
+           rm -rf oras_0.12.0_*.tar.gz oras-install/
+           echo "Oras installed!"
           
       - name: Login to ghcr
         run: oras login ghcr.io -u vinaykanamarlapudi -p ${{ secrets.GITHUB_TOKEN }}
-#       
-#       - name: Uploading to ghcr
-#         run: oras push ghcr.io/vinaykanamarlapudi/fp:1.0.0 --manifest-config /dev/null:application/vnd.actions.packages ./:application/vnd.actions.packages.layer.v1+tar
+      
+      - name: Uploading to ghcr
+        run: oras push ghcr.io/vinaykanamarlapudi/fp:1.0.0 --manifest-config /dev/null:application/vnd.actions.packages ./:application/vnd.actions.packages.layer.v1+tar
       - name: Running action   
         uses: ruchika-jain/package-action@1.0.1
         with:
