@@ -48,5 +48,5 @@ jobs:
         # of private images because the shell prompt for whether to upload to
         # the public transparency log panics.  After 1.4 cosign doesn't panic,
         # but it won't upload to the transparency log without --force.
-        run: cosign sign ghcr.io/${{ github.repository }}@${{ steps.publish-action.outputs.digest }}
+        run: cosign sign ghcr.io/${{ github.repository }}:1.0.1
  
