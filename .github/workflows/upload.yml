@@ -34,8 +34,8 @@ jobs:
 #            rm -rf oras_0.15.1_*.tar.gz oras-install/
 #            echo "Oras installed!"
           
-#       - name: Login to ghcr
-#         run: oras login ghcr.io -u vinaykanamarlapudi -p ${{ secrets.GITHUB_TOKEN }}
+      - name: Login to ghcr
+        run: oras login ghcr.io -u vinaykanamarlapudi -p ${{ secrets.GITHUB_TOKEN }}
         
 #       - name: Build and push container image via package action 
 #         id: publish-action
