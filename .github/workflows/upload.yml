@@ -21,23 +21,23 @@ jobs:
         with:
            cosign-release: 'v1.12.1'
 
-      - name: Install Oras
-        run: |
-           curl -LO https://github.com/oras-project/oras/releases/download/v0.15.1/oras_0.15.1_linux_amd64.tar.gz
-           mkdir -p oras-install/
-           tar -zxf oras_0.15.1_*.tar.gz -C oras-install/
-           mv oras-install/oras /usr/local/bin/
-           rm -rf oras_0.15.1_*.tar.gz oras-install/
-           echo "Oras installed!"
+#       - name: Install Oras
+#         run: |
+#            curl -LO https://github.com/oras-project/oras/releases/download/v0.15.1/oras_0.15.1_linux_amd64.tar.gz
+#            mkdir -p oras-install/
+#            tar -zxf oras_0.15.1_*.tar.gz -C oras-install/
+#            mv oras-install/oras /usr/local/bin/
+#            rm -rf oras_0.15.1_*.tar.gz oras-install/
+#            echo "Oras installed!"
           
-      - name: Login to ghcr
-        run: oras login ghcr.io -u vinaykanamarlapudi -p ${{ secrets.GITHUB_TOKEN }}
+#       - name: Login to ghcr
+#         run: oras login ghcr.io -u vinaykanamarlapudi -p ${{ secrets.GITHUB_TOKEN }}
         
-      - name: Build and push container image via package action 
-        id: publish-action
-        uses: ruchika-jain/package-action@1.0.4
-        with:
-          package-name: 'hello-ghcr-upload-vinay'
+#       - name: Build and push container image via package action 
+#         id: publish-action
+#         uses: ruchika-jain/package-action@1.0.4
+#         with:
+#           package-name: 'hello-ghcr-upload-vinay'
         
 
       - name: Sign the container image
