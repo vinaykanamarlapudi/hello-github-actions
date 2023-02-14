@@ -37,11 +37,11 @@ jobs:
       - name: Login to ghcr
         run: oras login ghcr.io -u vinaykanamarlapudi -p ${{ secrets.GITHUB_TOKEN }}
         
-#       - name: Build and push container image via package action 
-#         id: publish-action
-#         uses: ruchika-jain/package-action@1.0.4
-#         with:
-#           package-name: 'hello-ghcr-upload-vinay'
+      - name: Build and push container image via package action 
+        id: publish-action
+        uses: ruchika-jain/package-action@1.0.4
+        with:
+          package-name: 'hello-ghcr-upload-vinay'
         
 
       - name: Sign the container image
